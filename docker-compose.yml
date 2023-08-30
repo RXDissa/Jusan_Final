@@ -25,3 +25,8 @@ services:
       context: ./client
     ports:
       - "3000:3000"
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
